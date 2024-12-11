@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onclick ke andher js likha jata hai -->
+    <button onclick="hello()">Click Here</button> 
+    <!-- function ko button ke click pe call karne ke liye -->
+    <button onclick="add()">Addition</button>
+
+    <hr>
+
+    <input type="text"  id="username">
+    <!-- double click is an event -->
+    <button ondblclick="submitName()">Submit</button>
+
+    <script>
+
+        let a=parseInt(prompt("Enter A:"));
+        let b=parseInt(prompt("Enter B:"));
+        function hello()
+        {
+            document.write("<h1>Hello</h1>");
+        }
+
+       // hello(); it will not work until we call the function
+
+       function add()
+        {
+            document.write(a+b);
+        }
+
+        function submitName()
+        {
+           let username=document.getElementById("username").value;
+           document.write("<h1 style='background-color:plum'>"+username+"</h1>");
+        }
+    </script>
+
+</body>
+</html>

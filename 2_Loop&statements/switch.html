@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let firstNum = parseInt(prompt("Enter First Number: "));
+
+        let secondNum = parseInt(prompt("Enter Second Number: "));
+
+        let choice = parseInt(prompt("Enter 1:add 2:sub 3:mul 4:div "));
+
+        //instead of document.write we can use alert also
+
+        switch(choice)
+        {
+            case 1:
+                document.write("<h1> Addition is "+(firstNum+secondNum)+"</h1>");
+                break;
+
+            case 2:
+                document.write("<h1> Substraction is "+ (firstNum-secondNum)+"</h1>");
+                break;
+
+            case 3:
+                document.write("<h1> Multiplication is "+(firstNum*secondNum)+"</h1>");
+                break;
+            
+            case 4:
+                document.write("<h1> Division is "+(firstNum/secondNum)+"</h1>");
+                break;
+
+            default:
+                document.write("<p style='color:red'> Invalid Input </p>");
+        }
+
+    </script>
+    
+</body>
+</html>
