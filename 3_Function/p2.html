@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: plum;
+            height: 400px;
+            width:400px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container"></div>
+    <button onclick="display()">Click Here</button>
+    <button onclick="circle()">Circle</button>
+
+    <script>
+
+        function display()
+        {
+            document.querySelector(".container").innerHTML="<h1>Hello</h1>" //will not show error if any camelcase mistake is there
+
+        }
+
+        function circle()
+        {
+            document.querySelector(".container").style.borderRadius="100%";
+        }
+
+        // hw :- change the color
+    </script>
+
+</body>
+</html>
