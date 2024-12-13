@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+       
+    <style>
+        #container
+        {
+            border:2px solid black;
+            height:100px;
+            width:100px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="container"></div>
+
+    <script>
+
+        const container = document.getElementById("container");
+
+      
+        //onclick is not suitable where the project is scalable(changes can be made in the project)
+        //so that's why we use addEvent listener
+
+        //addEventListner needs event and the function
+        //addEventlistener is also function that means we are writing function inside function
+        container.addEventListener("click",function() //we can use moveover instead of click
+        {
+            alert("Color Will Be Changed");
+           // container.style.backgroundColor="red"
+        })
+
+        //in above we have written anonymous function without the function name
+        //the function cant be used outside the addEventlistener function
+        //if we want to use it outside then we need to add function in variable
+
+        //arrow function
+        container.addEventListener("click",(event)=>{
+        event.target.style.backgroundColor="blue";
+        console.log(event.target);  //.className after target
+        });
+
+    </script>
+    
+</body>
+</html>

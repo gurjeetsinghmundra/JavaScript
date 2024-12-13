@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="subject">
+    <button onclick="add()">Add</button>
+
+    <script>
+
+    function add()
+    {
+        const subject = document.getElementById("subject").value; //will take input box value that's entered
+        //const heading = document.createElement("h1"); //will create h1 tag
+        const heading = document.createElement("marquee"); //marquee will add sliding effect
+        const content = document.createTextNode(subject); //will take text and store it 
+        heading.appendChild(content); //h1 ke andhar content
+        document.body.appendChild(heading); //should be applied to add in body
+    }
+
+    </script>
+
+</body>
+</html>
