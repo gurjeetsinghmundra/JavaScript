@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="subjects">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>React</li> 
+    </ul>
+    
+        <script>
+    
+            const listElements = document.getElementById("subjects").children;
+            const colors=["red","green","plum","aqua"];
+            for(let i=0;i<listElements.length;i++)
+           {
+            listElements[i].style.backgroundColor=colors[i];
+            listElements[i].style.margin="2px";
+           }
+        
+        </script>
+    
+</body>
+</html>

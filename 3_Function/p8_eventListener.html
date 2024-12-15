@@ -20,7 +20,7 @@
 </head>
 <body>
     
-    <div id="container"></div>
+    <div id="container" class="A"></div>
 
     <script>
 
@@ -45,7 +45,7 @@
         //arrow function
         container.addEventListener("click",(event)=>{
         event.target.style.backgroundColor="blue";
-        console.log(event.target);  //.className after target
+        console.log(event.target.className); 
         });
 
     </script>
