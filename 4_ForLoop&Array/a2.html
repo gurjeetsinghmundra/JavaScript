@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Add Subjects -->
+    <ul id="subjects">
+
+    </ul>
+
+    <button onclick="add()">Add Subjects</button>
+
+    <script>
+
+        const subjects=["HTML","CSS","Javascript"]
+
+        function add()
+        {   
+            const ul=document.getElementById("subjects");
+            for(let i=0;i<subjects.length;i++)
+            {
+                const li = document.createElement("li"); //creates li
+                li.appendChild(document.createTextNode(subjects[i])); //create texts in li
+                ul.appendChild(li); // will put li under ul
+            }  
+        }
+    </script>
+
+</body>
+</html>
