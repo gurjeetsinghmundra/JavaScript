@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container
+        {
+            background-color:darkolivegreen;
+            height: 400px;
+            padding: 40px;
+        }
+
+        #box{
+            background-color: antiquewhite;
+            height:200px;
+            width:60%;
+            padding: 10px;
+        }
+        #Heading{
+            color:chocolate;
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <div id="container">
+
+        <div id="box">
+
+            <h1 id="Heading">Hello</h1>
+
+        </div>
+
+    </div>
+
+    <!-- anchor tag is used to connect web pages or to go from one page to another -->
+    <!-- default behaviour :- click and redirect  -->
+    <a href="https://www.google.co.in/" id="link">Google</a> 
+
+    <form action="">
+
+        <input type="text">
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <script>
+
+        document.getElementById("container").addEventListener("click",
+            ()=>{
+                alert("container");
+            }
+        )
+
+        document.getElementById("box").addEventListener("click",
+            (e)=>{
+                //e is an event object
+                e.stopPropagation();
+                alert("box");
+            }
+        )
+
+        document.getElementById("Heading").addEventListener("click",
+            (e)=>{
+                e.stopPropagation(); //will only show heading alert
+                //before this all the alert was popping (box,container)
+                alert("Heading");
+            }
+        )
+
+    </script>
+
+
+</body>
+</html>
