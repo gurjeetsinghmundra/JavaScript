@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    let nestedObject = {
+    id: 28802695164,
+    date: 'December 31, 2016',
+    data: {
+        totalUsers: 99,
+        online: 80,
+
+    onlineStatus: {
+        active: 67,
+        away: 13,
+        busy: 8
+       }
+    }
+    };
+
+    console.log(nestedObject["data"]["totalUsers"])
+    console.log(nestedObject["data"]["onlineStatus"]["active"])
+
+    </script>
+    
+</body>
+</html>

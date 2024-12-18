@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Fetching data from the form -->
+    
+    <form action="" id="productForm">
+
+        <input type="text" name="productName" id="" placeholder="productName"><br><br>
+        <input type="text" name="productDescription" id="" placeholder="productDescription"><br><br>
+        <input type="number" name="productPrice" id="" placeholder="productPrice"><br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <form action="" id="Form">
+
+        <input type="text" name="productName" id="" placeholder="productName"><br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <script>
+
+        document.getElementById("productForm").addEventListener("submit",(event)=>{
+
+            event.preventDefault();
+
+            console.log(event.target.productName.value);
+            console.log(event.target.productDescription.value);
+            console.log(event.target.productPrice.value);
+        })
+
+
+    </script>
+
+</body>
+</html>

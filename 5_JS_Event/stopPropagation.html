@@ -29,7 +29,13 @@
 
 </head>
 <body>
-    
+    <!-- event propagation in which order events will be executed  -->
+     <!-- two types -->
+   <!--Event bubbling (child to parent)-->
+     <!-- Event Capturing (parent to child) -->
+        <!-- Stop Propagation (nothing will happen coz of this)-->
+
+     <!-- Prevent default -->
     <div id="container">
 
         <div id="box">
@@ -44,7 +50,13 @@
     <!-- default behaviour :- click and redirect  -->
     <a href="https://www.google.co.in/" id="link">Google</a> 
 
-    <form action="">
+    <!-- <form action="" onsubmit="submitHandler(event)" id=""> -->
+    <form action="" onsubmit="" id="form">
+
+        <!-- whenever data is needed to send to server name attribute is used
+          -->
+        <input type="text" name="username"> 
+        <input type="text" name="age"> 
 
         <input type="text">
         <input type="submit" value="Submit">
@@ -53,27 +65,51 @@
 
     <script>
 
+        // by default it is event bubbling
+        // for event capturing we need to write true
         document.getElementById("container").addEventListener("click",
             ()=>{
                 alert("container");
-            }
+            },true //<----
         )
 
         document.getElementById("box").addEventListener("click",
             (e)=>{
                 //e is an event object
-                e.stopPropagation();
+                //jab hum click karte hai tab saari info e me store hoti hai
+              //  e.stopPropagation();
                 alert("box");
-            }
+            },true
         )
 
         document.getElementById("Heading").addEventListener("click",
             (e)=>{
-                e.stopPropagation(); //will only show heading alert
+               // e.stopPropagation(); //will only show heading alert
                 //before this all the alert was popping (box,container)
                 alert("Heading");
-            }
+            },true
         )
+
+        document.getElementById("link").addEventListener("click",(event)=>{
+            //in react web page should not get refreshed
+            event.preventDefault(); //this will avoid refreshing the page on any event
+        })
+
+        // function submitHandler(event)
+        // {
+        //     event.preventDefault();
+        // }
+
+        document.getElementById("form").addEventListener("submit",(event)=>{
+
+            event.preventDefault();
+           
+            console.log(event.target.username.value);
+            console.log(event.target.age.value);
+        })
+
+
+
 
     </script>
 
