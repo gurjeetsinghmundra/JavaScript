@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- this keyword -->
+
+    <script>
+
+        const product={
+            productId:101,
+            productName:"Iphone",
+            productPrice:100000,
+            details:function(){
+                return this.productId+" "+this.productName+" "+this.productPrice;
+            },
+            discount:function(){
+                //return this.productPrice-15000;
+                return this.productPrice*0.85;
+            },
+            available:function(){
+                return this.productName+" available in the shop";
+        
+            },
+            //parameterized
+            // to call it : product.demo("laptop");
+            demo:function(name){
+                return name;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

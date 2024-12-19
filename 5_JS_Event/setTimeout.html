@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+       <script>
+
+        //setTimeout(function,time(1*1000))
+
+        //function he function ko call karega just like eventListener
+        function hello()
+        {
+            document.write("Hello");
+        }
+
+        function bye()
+        {
+            document.write("Bye");
+        }
+
+
+       // setTimeout(hello,5000);
+
+        setTimeout(()=>{
+            hello();
+        },5000);
+
+        setTimeout(()=>{
+            bye();
+        },5000);
+
+        //both work will be done in 5 second
+        //By default multithreading is happening
+        //this behaviour is asynchronous
+        //js is asynchronous (one function will not wait for other function)
+        //both will do their own work on same time and not interrupt each other
+       //java is synchronous(first function will work than the other function)
+       //thats why in java we have multithreading to make java asynchronous
+           
+       </script>
+
+</body>
+</html>

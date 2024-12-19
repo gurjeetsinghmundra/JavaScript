@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //array destructuring
+        //array ko todke usko alag alag variables me store karna
+        //const arr=[12,53,25,65,2]
+        //const [a,b,c]=arr;
+        //a=12,b=53
+
+        //rest : const [m,...n]=arr;
+        //m=12 ,n=[53,25,65,2]
+
+        //object destructuring
+        //let {studentId,studentName,studentMarks}=student
+        //sequence doesnt matter :{studentId,studentName,studentMarks}
+        //studentId will give 101
+        const student={
+            studentId:101,
+            studentName:"Guru",
+            studentMarks:90
+        }
+
+        function details(s){
+            console.log(s);
+        }
+        //details(student);
+        //output(object): {studentId: 101, studentName: 'Guru', studentMarks: 90} 
+        
+        function details_stu({studentId,studentName,studentMarks}){
+            console.log(studentId);
+            console.log(studentName);
+            console.log(studentMarks);
+        }
+        //details_stu(student);
+        //output: 101 Guru 90
+
+        const numbers=[12,56,78,11,43];
+        const [a,b]=numbers;
+        function add()
+        {
+           return a+b;
+        }
+
+        const [m,n]=numbers;
+        function mul()
+        {
+            return m*n;
+        }
+        
+        
+
+    </script>
+    
+</body>
+</html>
