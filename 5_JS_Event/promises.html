@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- government made api for datas in covid -->
+
+<script>
+    const promise = new Promise(function(resolve,reject){
+        let status=false;
+        if(status)
+            resolve("Success");
+        else
+            reject("Fail");
+    });
+
+    promise.then((data)=>{alert(data)}); //for resolve then is used
+
+    promise.catch((data)=>{alert(data)}); //for reject catch is used
+
+
+</script>
+
+</body>
+</html>

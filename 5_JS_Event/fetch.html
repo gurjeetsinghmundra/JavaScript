@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //spring boot se aane wala data yehi function fetch karega
+
+        //fetch() promise
+        //fetch will return promise ka object
+
+    const promise=fetch("https://official-joke-api.appspot.com/random_joke");
+
+    console.log(promise);
+
+   // promise.then(data=>console.log(data)); //reponse kaa object milega
+    // promise.then(data=>console.log(data.text())); //text method kaa return type promise hai 
+    //with text it will show data
+
+    promise.then(data=>console.log(data.json())); //will give object
+    </script>
+
+
+</body>
+</html>
