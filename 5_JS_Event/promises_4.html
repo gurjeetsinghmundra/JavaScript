@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="" alt="" id="image" width="40%">
+    <button id="fetchImage">Click Here</button>
+
+    <script>
+
+        document.getElementById("fetchImage").addEventListener("click",()=>{
+        fetch("https://dog.ceo/api/breeds/image/random").
+        then(data=>data.json()) //convert response into json
+        .then(data=>
+            {
+              //console.log(data["message"]);
+              document.getElementById("image").src=data["message"];
+            }
+        )
+    });
+
+    </script>
+    
+</body>
+</html>

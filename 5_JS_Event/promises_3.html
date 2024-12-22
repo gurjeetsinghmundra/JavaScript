@@ -7,13 +7,19 @@
 </head>
 <body>
     
+    <img src="" alt="" id="image" width="40%">
+    
     <script>
 
         fetch("https://fakestoreapi.com/products/1")
         .then(data=>data.json())   //promise ka object
  //       .then(data=>console.log(data["rating"]["rate"]));
-        .then(data=>console.log(data["image"])); //object
-    </script>
+        .then(data=>
+        {
+            console.log(data["image"]);//object
+            document.getElementById("image").src=data["image"];
+        });
+            </script>
 
 </body>
 </html>
