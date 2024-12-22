@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <div id="setup">Jokes</div>
+    <div id="punchline">Jokes</div>
+</head>
+<body>
+
+    <button id="jokes">Click Here</button>
+    
+    <script>
+
+    document.getElementById("jokes").addEventListener("click",()=>{
+
+        const promise=fetch("https://official-joke-api.appspot.com/random_joke");
+    promise.then(data=>data.json())
+    .then(data=>{
+        document.getElementById("setup").innerHTML=data["setup"];
+        document.getElementById("punchline").innerHTML=data["punchline"];
+    });
+    })
+      
+    </script>
+</body>
+</html>
