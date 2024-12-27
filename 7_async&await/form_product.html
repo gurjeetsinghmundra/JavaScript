@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    
+    <!-- Product Form -->
+    <!-- in bootstrap we can give form container class to add form in center -->
+
+    <form action="" id="productForm">
+    <table  cellpadding="10" cellspacing="20">
+       <tr>
+        <td><label for="">Enter ProductId: </label></td>
+        <td><input type="number" name="productId" placeholder="ProductId"></td>
+     </tr>
+
+     <tr>
+        <td><label for="">Enter ProductName: </label></td>
+        <td><input type="text" name="productName" placeholder="ProductName"></td>
+    </tr>
+       
+    <tr>
+        <td><label for="">Enter ProductDescription: </label></td>
+        <td><input type="text"  name="productDescription"placeholder="ProductDesc"></td>
+    </tr>
+
+    <tr>
+        <td><label for="">Enter ProductPrice: </label></td>
+        <td> <input type="number" name="productPrice" placeholder="ProductPrice"></td>
+    </tr>
+       
+    <tr>
+        <td> <button type="submit">Submit</button></td>
+    </tr>
+
+    </table>
+
+    </form>
+
+    <!-- Product Form End -->
+
+      <script>
+
+
+
+        document.getElementById("productForm").addEventListener("submit",(event)=>{
+
+            //will not refresh the page(page ke sath console be refresh hota hai)
+            event.preventDefault();
+            fetch("http://localhost:8080/products",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                //javascript to json conversion
+                body:JSON.stringify({
+                    productId:event.target.productId.value, //to fetch value from the form
+                    productName:event.target.productName.value,
+                    productDescription:event.target.productDescription.value,
+                    productPrice:event.target.productPrice.value
+                })
+            }).then(data=>data.json())
+            .then(data=>console.log(data))
+        })
+    </script>
+   
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="addProduct">Add Product</button>
+    
+    <script>
+
+        //method (get,put,post,delete) postman
+        //header contains content type
+        //body has data
+
+        document.getElementById("addProduct").addEventListener("click",()=>{
+
+            fetch("http://localhost:8080/products",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                //javascript to json conversion
+                body:JSON.stringify({
+                    productId:"101",
+                    productName:"Demo Product",
+                    productDescription:"Desc",
+                    productPrice:"5000"
+                })
+            }).then(data=>data.json())
+            .then(data=>console.log(data))
+
+        })
+
+
+    </script>
+    
+</body>
+</html>
