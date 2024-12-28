@@ -1,5 +1,5 @@
 fetch("http://localhost:8080/products")
-.then(data=>data.json())
+.then(data=>data.json()) //convert data to json
 .then(data=>{
     console.log(data);
 
@@ -7,6 +7,8 @@ fetch("http://localhost:8080/products")
     document.write(`<p>totalPages: ${data["page"]["totalPages"]}</p>`)
     document.write(`<p>size: ${data["page"]["size"]}</p>`)
   
+
+    //foreach arrays pe lagta hai
     data["_embedded"]["products"].forEach(product=>{
         //$ means value
         //``
