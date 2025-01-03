@@ -17,7 +17,7 @@
 
         document.getElementById("addProduct").addEventListener("click",()=>{
 
-            fetch("http://localhost:8080/products",{
+            fetch("http://localhost:8080/products",){
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -28,7 +28,7 @@
                     productName:"Demo Product",
                     productDescription:"Desc",
                     productPrice:"5000"
-                })
+                }
             }).then(data=>data.json())
             .then(data=>console.log(data))
 

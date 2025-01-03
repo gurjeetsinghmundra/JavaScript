@@ -9,6 +9,11 @@
 
     <script>
 
+        //javascript is asynchronous in nature
+        //to use await we need to declare our function as async
+        //only then await can be used
+        //await runs 1 by 1
+
         async function products(){
 
         const data = await fetch("http://localhost:8080/products");
@@ -16,7 +21,7 @@
         console.log(products["_embedded"]["products"][1]["productName"]);
         }
 
-        products();
+        products(); 
 
     </script>
     
